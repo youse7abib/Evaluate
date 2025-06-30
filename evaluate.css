@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#Testimonials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #ddd;
+    padding: 7rem;
+}
+
+
+
+#Testimonials h2 {
+    font-size: 36px;
+}
+
+.border {
+    height: 3px;
+    width: 220px;
+    background-color: red;
+    margin: 15px 30px;
+}
+
+#Testimonials .row {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    text-align: center;
+
+}
+
+#Testimonials .row .col {
+    background-color: #fff;
+    margin: 1rem 1rem;
+    padding: 50px 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0.2);
+
+    flex: 1 1 300px;
+    opacity: 0;
+
+    animation: fadeUp 1s ease forwards;
+    transition: transform 0.3s ease;
+}
+
+#Testimonials .row .col:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#Testimonials .row .col img {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+#Testimonials .row .col h3 {
+    font-size: 20px;
+}
+
+#Testimonials .row .col .stars {
+    margin: 15px 0;
+    color: gold;
+}
+
+#Testimonials .row .col p {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+
+
+/* Tablet*/
+@media (max-width: 900px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/*moblie*/
+@media (max-width: 600px) {
+    #Testimonials {
+        padding: 3rem;
+    }
+}
+
+.img-link img {
+    transition: transform 0.3s ease;
+}
+
+.img-link:hover img {
+    transform: scale(1.5);
+}
+
+#Testimonials .row-form .col-form form textarea {
+    width: 95%;
+    height: 100px;
+    margin: 15px;
+    padding: 10px;
+    border: 2px solid linear-gradient(135deg, rgba(255, 255, 255, 0.1));
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    resize: none;
+}
+
+
+
+
+header {
+    color: gold;
+    background: #152d32;
+    padding: 20px;
+    font-size: 1.8rem;
+    text-shadow: 2px 2px 4px gold;
+    border: linear-gradient(135deg, rgba(255, 255, 255, 0.1));
+    border-radius: 20px;
+    width: 100%;
+    text-align: center;
+
+}
+
+button {
+    background-color: gold;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: darkblue;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: mymove 5s infinite;
+
+
+}
+
+button:hover {
+    background-color: darkcyan;
+    transform: scale(1.2);
+    animation: mymove 5s infinite;
+
+}
+
+@keyframes mymove {
+    50% {
+        box-shadow: 20px 30px 40px skyblue
+    }
+}
+
+
+#Testimonials .row-form {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+    flex-direction: column;
+    padding: 2rem;
+
+}
+
+#Testimonials .row-form .col-form {
+    background-color: #152d32;
+    border-radius: 20px;
+    margin: 1rem 1rem;
+    padding: 50px 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px rgb(0, 0, 0.2);
+    backdrop-filter: blur();
+    animation: fadeUp 1s ease forwards;
+    transition: transform 0.3s ease;
+}
+
+form label {
+    display: block;
+    margin-bottom: rem;
+    font-weight: bold;
+    color: gold;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur((10px));
+}
+
+form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 1rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur((10px));
+}
+
+
+form textarea::placeholder {
+    color: gold;
+}
+
+form input::placeholder {
+    color: gold;
+}
+
+
+#Testimonials .row-form .col-form h3 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: gold;
+}
+
+@media (max-width: 600px) {
+    #Testimonials .row-form .col-form {
+        padding: 1rem;
+    }
+
+    form input[type="text"],
+    form textarea {
+        font-size: 0.9rem;
+    }
+}
